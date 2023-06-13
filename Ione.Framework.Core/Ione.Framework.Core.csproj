@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Ione.Framework.Core.6.0.7</AssemblyName>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>Ione.Framework.Core.pfx</AssemblyOriginatorKeyFile>
+    <Version>6.0.7</Version>
+    <PackageId>$(AssemblyName)</PackageId>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageIconUrl></PackageIconUrl>
+    <BaseOutputPath>..\Deploy</BaseOutputPath>
+    <Title>Ione Framework Core</Title>
+    <PackageProjectUrl>https://github.com/ionehouten/Ione-Framework-Core</PackageProjectUrl>
+    <PackageIcon>icon.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ionehouten/Ione-Framework-Core</RepositoryUrl>
+    <PackageTags>c#, .net6</PackageTags>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Deploy\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IModel2.cs" />
+    <Compile Remove="IModelSelect.cs" />
+    <Compile Remove="InputParameters.cs" />
+    <Compile Remove="JsonNetSerializer.cs" />
+    <Compile Remove="OutputParameters.cs" />
+    <Compile Remove="OutputResponse.cs" />
+    <Compile Remove="SharedMemory.cs" />
+    <Compile Remove="Utils\DeviceDetector.cs" />
+    <Compile Remove="Utils\GDIWrap.cs" />
+    <Compile Remove="Utils\HardwareInfo.cs" />
+    <Compile Remove="Utils\MotherboardInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="108.0.2" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.1" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="6.0.1" />
+    <PackageReference Include="System.Management" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

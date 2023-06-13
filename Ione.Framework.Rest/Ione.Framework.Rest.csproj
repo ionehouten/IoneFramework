@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>Ione.Framework.Rest.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyName>Ione.Framework.Rest.6.0.7</AssemblyName>
+    <Version>6.0.7</Version>
+    <BaseOutputPath>..\Deploy</BaseOutputPath>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Deploy\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="IoneJsonSerializer.cs" />
+    <Compile Remove="IJsonSerializer.cs" />
+    <Compile Remove="InputParameters.cs" />
+    <Compile Remove="IViewModel.cs" />
+    <Compile Remove="IXmlSerializer.cs" />
+    <Compile Remove="Model - Copy.cs" />
+    <Compile Remove="Model_.cs" />
+    <Compile Remove="NewtonsoftJsonSerialize.cs" />
+    <Compile Remove="OutputParameters.cs" />
+    <Compile Remove="OutputResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="108.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ione.Framework.Core\Ione.Framework.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Ione.Framework.Rest.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

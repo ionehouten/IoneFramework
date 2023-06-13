@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ione.Framework.Core", "Ione.Framework.Core\Ione.Framework.Core.csproj", "{A8B7AC92-C998-492A-A4C7-F010FC51EDC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ione.Framework.Rest", "Ione.Framework.Rest\Ione.Framework.Rest.csproj", "{BAF44800-FCA7-4687-9A36-FA4578850781}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ione.Framework.Soap", "Ione.Framework.Soap\Ione.Framework.Soap.csproj", "{BF9DCCCC-0CEE-4FDD-876C-855166667545}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ione.Framework.Test", "Ione.Framework.Test\Ione.Framework.Test.csproj", "{8511A393-A918-43B7-B0C0-B8C96DBED0D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{422A64E8-E755-4474-B070-1534807EDE8F}"
+	ProjectSection(SolutionItems) = preProject
+		Ione.Framework.Core.nuspec = Ione.Framework.Core.nuspec
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary1", "RazorClassLibrary1\RazorClassLibrary1.csproj", "{C6813FC3-FC8B-4F00-9270-A7F603946931}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8B7AC92-C998-492A-A4C7-F010FC51EDC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B7AC92-C998-492A-A4C7-F010FC51EDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B7AC92-C998-492A-A4C7-F010FC51EDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B7AC92-C998-492A-A4C7-F010FC51EDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF44800-FCA7-4687-9A36-FA4578850781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF44800-FCA7-4687-9A36-FA4578850781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF44800-FCA7-4687-9A36-FA4578850781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF9DCCCC-0CEE-4FDD-876C-855166667545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF9DCCCC-0CEE-4FDD-876C-855166667545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF9DCCCC-0CEE-4FDD-876C-855166667545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF9DCCCC-0CEE-4FDD-876C-855166667545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8511A393-A918-43B7-B0C0-B8C96DBED0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8511A393-A918-43B7-B0C0-B8C96DBED0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8511A393-A918-43B7-B0C0-B8C96DBED0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8511A393-A918-43B7-B0C0-B8C96DBED0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6813FC3-FC8B-4F00-9270-A7F603946931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6813FC3-FC8B-4F00-9270-A7F603946931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6813FC3-FC8B-4F00-9270-A7F603946931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6813FC3-FC8B-4F00-9270-A7F603946931}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D03F597-41A7-488F-BC55-7256EABECAE8}
+	EndGlobalSection
+EndGlobal

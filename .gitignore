@@ -1,0 +1,10 @@
+/.vs
+/Deploy/netcoreapp2.2
+/Ione.Framework.Core/bin
+/Ione.Framework.Core/obj
+/Ione.Framework.Rest/bin
+/Ione.Framework.Rest/obj
+/Ione.Framework.Soap/bin
+/Ione.Framework.Soap/obj
+/Ione.Framework.Test/bin
+/Ione.Framework.Test/obj

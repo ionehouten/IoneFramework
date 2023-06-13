@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Ione.Framework.Core</id>
+	<title>Ione.Framework.Core</title>
+    <version>6.0.5</version>
+    <authors>Iwan Setiawan</authors>
+    <owners>Iwan Setiawan</owners>
+	<license type="expression">MIT</license>
+    <projectUrl>https://github.com/ionehouten/IoneFramework</projectUrl>
+	<tags>c#, .net6, .net core</tags>
+    <repository url="https://github.com/ionehouten/IoneFramework" />
+    <!--<icon>icon.jpg</icon>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ione Framework Core</description>
+    <releaseNotes>SOAP/Rest Modeling</releaseNotes>
+    <copyright>Copyright 2022</copyright>
+	<dependencies>
+      <group targetFramework=".net6.0">
+        <dependency id="RestSharp" version="108.0.2" exclude="Build,Analyzers" />
+		<dependency id="System.Configuration.ConfigurationManager" version="6.0.1" exclude="Build,Analyzers" />
+		<dependency id="System.Diagnostics.PerformanceCounter" version="6.0.1" exclude="Build,Analyzers" />
+		<dependency id="System.Management" version="6.0.0" exclude="Build,Analyzers" />
+      </group>
+	</dependencies>
+	<frameworkReferences>
+      <group targetFramework="net6.0">
+		  <!--<frameworkReference name="Microsoft.NETCore.App" />-->
+		  <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="Deploy\net6.0\Ione.Framework.Core.6.0.5.dll" target="lib\net6.0" />
+	<file src="Deploy\net6.0\Ione.Framework.Rest.6.0.5.dll" target="lib\net6.0" />
+  </files>
+</package>

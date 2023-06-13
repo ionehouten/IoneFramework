@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Ione.Framework.Rest": {
+      "commandName": "Executable",
+      "executablePath": "D:\\PROJECT\\ASP.NET\\CE\\Web.Ui\\bin\\Debug\\net6.0\\Web.Ui.exe",
+      "workingDirectory": "D:\\PROJECT\\ASP.NET\\CE\\Web.Ui",
+      "sqlDebugging": false,
+      "remoteDebugEnabled": false,
+      "nativeDebugging": true
+    }
+  }
+}
