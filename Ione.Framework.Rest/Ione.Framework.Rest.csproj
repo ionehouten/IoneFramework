@@ -4,8 +4,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>Ione.Framework.Rest.pfx</AssemblyOriginatorKeyFile>
-    <AssemblyName>Ione.Framework.Rest.6.0.7</AssemblyName>
-    <Version>6.0.7</Version>
+    <AssemblyName>Ione.Framework.Rest.6.0.8</AssemblyName>
+    <Version>6.0.8</Version>
     <BaseOutputPath>..\Deploy</BaseOutputPath>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <OutputType>Library</OutputType>

@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <AssemblyName>Ione.Framework.Core.6.0.7</AssemblyName>
+    <AssemblyName>Ione.Framework.Core.6.0.8</AssemblyName>
     <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>Ione.Framework.Core.pfx</AssemblyOriginatorKeyFile>
-    <Version>6.0.7</Version>
+    <Version>6.0.8</Version>
     <PackageId>$(AssemblyName)</PackageId>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>

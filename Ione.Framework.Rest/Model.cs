@@ -32,7 +32,7 @@ namespace Ione.Framework.Rest
 
             JsonSerializerOptions.Converters.Add(new CustomDateTimeConverter(DateFormat));
         }
-
+        public RestClientOptions RestClientOptions { get; set; }
         public abstract string RestClient { get; }
         public abstract string EndpointGet { get; }
         public abstract string EndpointGetRow { get; }
@@ -510,8 +510,13 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
+
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(EndpointGet, Method.Get)
                 {
@@ -532,7 +537,7 @@ namespace Ione.Framework.Rest
                 
                 RestResponse<TRows> response = await Client.ExecuteAsync<TRows>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -561,8 +566,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(endpoint, Method.Get)
                 {
@@ -582,7 +591,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRows> response = await Client.ExecuteAsync<TRows>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -610,8 +619,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(EndpointGetRow, Method.Get)
                 {
@@ -630,7 +643,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -659,8 +672,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(endpoint, Method.Get)
                 {
@@ -679,7 +696,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -707,8 +724,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(EndpointPost, Method.Post)
                 {
@@ -727,7 +748,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -756,8 +777,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(endpoint, Method.Post)
                 {
@@ -776,7 +801,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -804,8 +829,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(EndpointPut, Method.Put)
                 {
@@ -824,7 +853,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -853,8 +882,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(endpoint, Method.Put)
                 {
@@ -873,7 +906,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -901,8 +934,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(EndpointDelete, Method.Delete)
                 {
@@ -921,7 +958,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -950,8 +987,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(RestClient);
+                this.Client = new RestClient(options);
                 this.Client.UseSystemTextJson(JsonSerializerOptions);
                 this.Request = new RestRequest(endpoint, Method.Delete)
                 {
@@ -970,7 +1011,7 @@ namespace Ione.Framework.Rest
 
                 RestResponse<TRow> response = await Client.ExecuteAsync<TRow>(Request);
                 Response = response;
-                if (response != null && response.ErrorException != null) throw response.ErrorException;
+                // var rest = new RegionRest(token);
                 return response.Data;
             }
             catch (Exception ex)
@@ -993,8 +1034,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(RestClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(this.RestClient);
+                this.Client = new RestClient(options);
                 this.Request = new RestRequest(this.EndpointDownload, Method.Get)
                 {
                     RequestFormat = this.RequestFormat
@@ -1019,8 +1064,12 @@ namespace Ione.Framework.Rest
         {
             try
             {
+                var options = RestClientOptions ?? new RestClientOptions()
+                {
+                    BaseUrl = new Uri(restClient)
+                };
                 StartExecution();
-                this.Client = new RestClient(restClient);
+                this.Client = new RestClient(options);
                 this.Request = new RestRequest(endpoint, Method.Get)
                 {
                     RequestFormat = this.RequestFormat

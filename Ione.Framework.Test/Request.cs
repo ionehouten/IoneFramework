@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
 using System.Text.Json.Serialization;
 
 namespace Ione.Framework.Test
@@ -7,7 +7,6 @@ namespace Ione.Framework.Test
     public class Request<T> where T : new()
     {
         [JsonPropertyName("pageSize")]
-        [FromQuery(Name = "pageSize")]
         public int? PageSize { get; set; }
         [JsonPropertyName("page")]
         public int? Page { get; set; }

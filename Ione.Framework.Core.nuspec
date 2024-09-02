@@ -3,7 +3,7 @@
   <metadata>
     <id>Ione.Framework.Core</id>
 	<title>Ione.Framework.Core</title>
-    <version>6.0.5</version>
+    <version>6.0.8</version>
     <authors>Iwan Setiawan</authors>
     <owners>Iwan Setiawan</owners>
 	<license type="expression">MIT</license>
@@ -31,7 +31,7 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="Deploy\net6.0\Ione.Framework.Core.6.0.5.dll" target="lib\net6.0" />
-	<file src="Deploy\net6.0\Ione.Framework.Rest.6.0.5.dll" target="lib\net6.0" />
+    <file src="Deploy\net6.0\Ione.Framework.Core.6.0.8.dll" target="lib\net6.0" />
+	<file src="Deploy\net6.0\Ione.Framework.Rest.6.0.8.dll" target="lib\net6.0" />
   </files>
 </package>
